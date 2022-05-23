@@ -50,7 +50,7 @@ export default function NewMeetupForm () {
         </div>
         <div className={classes.control}>
           <label htmlFor="date">Date *</label>
-          <input id="date" type="date" required></input>
+          <input id="date" type="date" min="2022-05-20" required></input>
         </div>
         <div className={classes.control}>
           <label htmlFor="hour">Hour *</label>
