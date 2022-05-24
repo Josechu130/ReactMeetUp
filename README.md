@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Aplicacion meet-up, prueba técnica Jose Maria Chimeno Espinola
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React MeetUps es una aplicacion de eventos en la que se puede crear entradas, visualizarlas y guardarlas en favoritos.
 
-## Available Scripts
+## Como ejecutar el proyecto (Web de consulta / entorno local)
 
-In the project directory, you can run:
+Se puede consultar a través de la pagina web de manera rapida: https://reactmeetup.000webhostapp.com/
 
-### `npm start`
+O en caso de ejecutar el proyecto en un entorno local, es necesario seguir uno a uno los siguientes pasos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Requisito: Se debe de tener instalado previamente un cliente de git en el ordenador, en caso de no tenerlo instalado, puedes consultar la siguiente guía de la [documentacion oficial de github](https://github.com/git-guides/install-git)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Abrir un terminal git apuntando a la carpeta en local donde se quiera almacenar los archivos del proyecto.
 
-### `npm test`
+2. Dirijirse a la pagina del [proyecto en github](https://github.com/Josechu130/ReactMeetUp)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    + Clic en el botón verde "Code"
+    + Seleccionar la opcion 'HTTPS' y copiar el enlace que aparece en el campo de texto
 
-### `npm run build`
+3. Una vez copiado el link de github, ejecutar la siguiente instrucción: git clone https://github.com/Josechu130/ReactMeetUp.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Con esto ya estará el proyecto descargado en local, será el momento de abrir un editor de texto, es recomendable utilizar [VSC](https://code.visualstudio.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Dentro de Visual Studio Code, arrastrando la carpeta del explorador se abrirá la carpeta y mostrará todos los archivos en el lateral izquierdo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. Ejecutar un nuevo terminal ('Terminal' => 'Nuevo terminal') y ejecutar la siguiente instruccion: 'npm install' (instalará todos los requerimientos del proyecto)
 
-### `npm run eject`
+7. Ejecutar la instrucción 'npm start', comenzará a ejecutar el servidor de desarrollo y ya se podrá consultar a través de cualquier navegador en la ruta *localhost:3000*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tests cases implementados
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se han implementado dos casos de prueba dentro del componente MeetUpItem.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- MeetupItem renders without crashing with props: Comprueba si la generación del MeetUpItem es correcta con el mookup de prueba.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- MeetupItem add to favs and check if counter works: Genera un MeetUp con un mookup y interactua con el botón añadir a favoritos para comprobar la funcionalidad
 
-## Learn More
+## Librerías externas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A continuacion se listan todas las librerías externas que se han utilizado para finalizar el proyecto.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Eslint: Es un interprete/analizador de codigo que permite revisar y correjir el codigo que se desarrolla en línea, es bastante para poder mover el codigo de un ordenador a otro, ya que fuerza a utilizar una typografía común, así evitando crear cambios fantasma en el momento de subir el codigo a git.
 
-### Code Splitting
+- React router: Es una librería que permite trabajar con el path del navegador y mostrar un componente u otro dependiendo de la ruta de acceso que se introduzca.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Material Ui: Es una librería de estilos bastante popular que da una estética mas atractiva al usuario
 
-### Analyzing the Bundle Size
+## Proximos pasos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Dejo anotadas funciones que por tema de tiempos no he podido aplicar
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Pagina de edición dentro de All MeetUps y My Favorites (CRUD Page)
+- Pagina de consulta del detalle de un evento (CRUD Page)
+- Creación de alerts para cada operacion que se realiza (Crear un nuevo meetup, Añadir a favoritos un meetup)
+- Adaptación a mobile (Sobretodo del menu)
+- Utilizar un servicio externo como 'FireBase' para almacenar y trabajar con los datos
