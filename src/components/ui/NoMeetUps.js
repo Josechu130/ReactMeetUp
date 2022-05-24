@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom'
 
 import classes from './NoFound.module.css'
 
-export function NoMeetUps ({ generateData }) {
+export function NoMeetUps (props) {
   const { data } = useFetch({
     url: '/data.json'
   })
 
   function generateMeetUps () {
     setMeetUps(data)
-    generateData()
+    props.generateData()
   }
 
   return (
