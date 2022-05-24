@@ -10,6 +10,12 @@ export const getDataFavs = () => {
   return dataFavs !== null ? dataFavs.filter(item => item.fav === 'Y') : null
 }
 
+// Add mookup items to localStorage
+
+export const setMeetUps = (items) => {
+  localStorage.setItem('meetups', JSON.stringify(items))
+}
+
 // Add new MeetUp on localStorage
 export const setNewMeetUp = (item) => {
   const retrieveData = getData()

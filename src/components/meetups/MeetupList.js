@@ -14,7 +14,7 @@ export default function MeetupList () {
     getNumOfFav()
   }
 
-  if (!data || data.length === 0) return <NoMeetUps />
+  if (!data || data.length === 0) return <NoMeetUps generateData={updateData} />
 
   function DataList () {
     return (
