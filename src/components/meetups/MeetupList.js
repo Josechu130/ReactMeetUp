@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { getData, getNumOfFav } from '../../util-hooks/localStorage'
 
 import MeetupItem from '../meetups/MeetupItem'
-
 import { NoMeetUps } from '../ui/NoMeetUps'
 
 export default function MeetupList () {
